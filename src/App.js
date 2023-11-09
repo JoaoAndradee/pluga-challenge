@@ -1,8 +1,11 @@
+import AppContainer from "./components/AppContainer";
+import "./index.css";
+
 function App() {
   return (
-    <div>
+    <AppContainer>
       <h1>PLUGA</h1>
-    </div>
+    </AppContainer>
   );
 }
 
