@@ -1,10 +1,11 @@
 import AppContainer from "./components/AppContainer";
 import "./index.css";
+import CardList from './components/CardList';
 
-function App() {
+const App = () => {
   return (
     <AppContainer>
-      <h1>PLUGA</h1>
+      <CardList />
     </AppContainer>
   );
 }
