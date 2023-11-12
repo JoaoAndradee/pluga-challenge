@@ -1,0 +1,24 @@
+.page-navigation {
+  margin: 50px 0;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-navigation button {
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.page-navigation button.active {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.page-navigation button:hover {
+  background-color: #3498db;
+  color: #fff;
+}
