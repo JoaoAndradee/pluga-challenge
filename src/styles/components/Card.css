@@ -9,11 +9,16 @@
   border: 1px solid #DDD;
 }
 
+.card:hover {
+  background-color: #DDD;
+}
+
 .card-img-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80%;
+  cursor: pointer;
 }
 
 .card-img-container img {
@@ -24,4 +29,12 @@
 
 .card-list span {
   font-weight: bold;
+}
+
+.card-list span:hover {
+  font-weight: bold;
+}
+
+.card-title {
+  cursor: pointer;
 }

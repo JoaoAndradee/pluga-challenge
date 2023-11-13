@@ -4,6 +4,12 @@
   height: 60px;
   border-radius: 40px;
   border: none;
+  cursor: pointer;
   background-color: #0EA7FF;
   color: #FFF;
 }
+
+.button-modal:hover {
+  background-color: #477DCA;
+}
+

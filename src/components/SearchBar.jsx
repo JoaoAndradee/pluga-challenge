@@ -13,7 +13,8 @@ const SearchBar = ({ onSearch }) => {
   }
 
   return (
-    <div className="search-bar-wrapper">
+    <label className="search-bar-wrapper">
+      <i className="fas fa-search" />
       <input
         type="text"
         placeholder="Buscar aplicativos..."
@@ -22,13 +23,12 @@ const SearchBar = ({ onSearch }) => {
         className="search-bar"
         data-testid="search-bar"
       />
-    </div>
+    </label>
   );
 }
 
 SearchBar.propTypes = {
   onSearch: PropTypes.func.isRequired,
 }
-
 
 export default SearchBar;
