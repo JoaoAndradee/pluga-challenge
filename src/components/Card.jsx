@@ -4,9 +4,9 @@ import '../styles/components/Card.css'
 
 const Card = ({ icon, name, color, onCardClick }) => {
   return (
-      <div className='card' onClick={onCardClick}>
+      <div className='card' onClick={onCardClick} data-testid="card">
         <div className="card-img-container">
-          <img src={icon} alt={name} style={{ backgroundColor: color }} />
+          <img src={icon} alt={name} style={{ backgroundColor: color }} data-testid="card-icon" />
         </div>
         <div className="card-title">
           <span>{name}</span>
@@ -18,7 +18,8 @@ const Card = ({ icon, name, color, onCardClick }) => {
 Card.propTypes = {
   icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired
+  color: PropTypes.string.isRequired,
+  onCardClick: PropTypes.func.isRequired,
 }
 
 export default Card;

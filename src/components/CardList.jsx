@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Card from "./Card";
 import '../styles/components/CardList.css';
 
@@ -16,6 +17,11 @@ const CardList = ({ apps, onOpenModal }) => {
         }
     </div>
   );
+}
+
+CardList.propTypes = {
+  apps: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onOpenModal: PropTypes.func.isRequired,
 }
 
 export default CardList;
