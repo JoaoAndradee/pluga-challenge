@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import '../styles/components/SearchBar.css';
 
@@ -19,9 +20,15 @@ const SearchBar = ({ onSearch }) => {
         value={searchTerm}
         onChange={handleSearch}
         className="search-bar"
+        data-testid="search-bar"
       />
     </div>
   );
 }
+
+SearchBar.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+}
+
 
 export default SearchBar;
