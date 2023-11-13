@@ -15,3 +15,9 @@
 .search-bar:focus {
   outline: 2px solid #477DCA;
 }
+
+.tools-app-icon img,
+.modal-icon img
+{
+  border-radius: 50%;
+}

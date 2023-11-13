@@ -1,7 +1,7 @@
 import Card from "./Card";
 import '../styles/components/CardList.css';
 
-const CardList = ({ apps }) => {
+const CardList = ({ apps, onOpenModal }) => {
   return (
     <div className="card-list">
       {apps.map((app, index) => (
@@ -10,6 +10,7 @@ const CardList = ({ apps }) => {
             icon={app.icon}
             name={app.name}
             color={app.color}
+            onCardClick={() => onOpenModal(app)}
           />
           ))
         }

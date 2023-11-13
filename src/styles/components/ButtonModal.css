@@ -1,0 +1,9 @@
+.button-modal {
+  padding: 20px;
+  width: 255px;
+  height: 60px;
+  border-radius: 40px;
+  border: none;
+  background-color: #0EA7FF;
+  color: #FFF;
+}

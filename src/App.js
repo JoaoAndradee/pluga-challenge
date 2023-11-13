@@ -5,11 +5,15 @@ import CardList from './components/CardList';
 import SearchBar from "./components/SearchBar";
 import PageNavigation from "./components/PageNavigation";
 import fetchData from "./services/apiService";
+import Modal from "./components/Modal";
 
 const App = () => {
   const [apiData, setApiData] = useState([]);
   const [filteredApps, setFilteredApps] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedApp, setSelectedApp] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [lastVisitedApps, setLastVisitedApps] = useState([]);
 
   useEffect(() => {
     const fetchApiData = async () => {
@@ -23,6 +27,23 @@ const App = () => {
 
     fetchApiData();
   }, []);
+
+  const handleOpenModal = (app) => {
+    setSelectedApp(app);
+    setIsModalOpen(true);
+
+    const isAppInList = lastVisitedApps.some((visitedApp) => visitedApp.app_id === app.app_id);
+
+    if (!isAppInList) {
+    const updatedVisitedApps = [...lastVisitedApps, app].slice(-3);
+    setLastVisitedApps(updatedVisitedApps);
+    }
+  }
+
+  const handleCloseModal = () => {
+    setSelectedApp(null);
+    setIsModalOpen(false);
+  }
 
   const handleSearch = (term) => {
     const filteredApp = apiData.filter((app) => {
@@ -44,11 +65,20 @@ const App = () => {
   return (
     <AppContainer>
       <SearchBar onSearch={handleSearch}/>
-      <CardList apps={visibleApps}/>
+      <CardList
+        apps={visibleApps}
+        onOpenModal={handleOpenModal}
+      />
       <PageNavigation
         currentPage={currentPage}
         totalPages={Math.ceil(filteredApps.length > 0 ? filteredApps.length / itemsPerPage : apiData.length / itemsPerPage)}
         onPageChange={handlePageChange}
+      />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        app={selectedApp}
+        lastVisitedApps={lastVisitedApps}
       />
     </AppContainer>
   );
