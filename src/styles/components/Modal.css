@@ -1,0 +1,61 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #FFF;
+  padding: 48px 80px 113px 80px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  min-width: 840px;
+  min-height: 600px;
+  transform: translateY(-10%);
+}
+
+.modal-header {
+  display: flex;
+}
+
+.modal-icon {
+  margin-right: 64px;
+}
+
+.modal-app-info h2 {
+  margin-top: 59px;
+  margin-bottom: 44px;
+}
+
+.last-tools {
+  margin-top: 70px;
+}
+
+.last-tools h2 {
+  margin-bottom: 42px;
+}
+
+.last-tools-apps {
+  display: flex;
+  justify-content: space-around;
+}
+
+.last-tools-apps.three-apps {
+  justify-content: space-between;
+}
+
+.tools-app-icon {
+  max-width: 145px;
+}
+
+.tools-app-icon h3 {
+  margin-top: 24px;
+  text-align: center;
+}
+
