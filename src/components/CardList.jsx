@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import Card from "./Card";
+import Card from './Card';
+
 import '../styles/components/CardList.css';
 
 const CardList = ({ apps, onOpenModal }) => {

@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 
-import '../styles/components/Modal.css';
 import ButtonModal from './ButtonModal';
+
+import '../styles/components/Modal.css';
 
 const Modal = ({ app ,isOpen, onClose, lastVisitedApps }) => {
   if (!isOpen) return null;

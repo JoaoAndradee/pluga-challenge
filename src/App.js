@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
+
 import AppContainer from "./components/AppContainer";
-import "./index.css";
 import CardList from './components/CardList';
-import SearchBar from "./components/SearchBar";
-import PageNavigation from "./components/PageNavigation";
-import fetchData from "./services/apiService";
 import Modal from "./components/Modal";
+import PageNavigation from "./components/PageNavigation";
+import SearchBar from "./components/SearchBar";
+import fetchData from "./services/apiService";
+
+import "./index.css";
 
 const App = () => {
   const [apiData, setApiData] = useState([]);
