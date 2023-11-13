@@ -8,7 +8,7 @@ const fetchData = async () => {
     }
     return response.json();
   } catch (error) {
-    console.error(error);
+    // console.error('Erro no fetchData: ', error.message);
     throw error;
   }
 }
