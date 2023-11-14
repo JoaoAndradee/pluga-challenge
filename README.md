@@ -13,7 +13,7 @@
 </p>
 
 <br><br>
-Este projeto tem como objetivo desenvolver uma página que faz consulta a uma api da [PLUGA](https://pluga.co/). Nele é rendeizado cards com informações sobre os apps com os quais ela faz integrações através de webhooks. A api retorna um JSON com essas informações contendo dados como id, nome, imagem e um link para a página da mesma.
+Este projeto tem como objetivo criar uma página que se conecta à API da PLUGA. A funcionalidade principal consiste em renderizar cards contendo informações sobre os aplicativos que integram com a PLUGA por meio de webhooks. A API retorna um JSON detalhado, incluindo dados cruciais como ID, nome, imagem e um link direto para a página do respectivo aplicativo.
 
 <h1 align="center">:hammer: O que foi desenvolvido</h1>
 
